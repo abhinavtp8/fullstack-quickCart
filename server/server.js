@@ -16,7 +16,7 @@ dns.setServers(["8.8.8.8"])
 // to convert json data to original form
 app.use(express.json()) //built-in middleware
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }))
+app.use(cors({ origin: "https://fullstack-quickcart.vercel.app", credentials: true }))
 
 //to access cookies
 app.use(cookieParser()) //also a middleware but third party
