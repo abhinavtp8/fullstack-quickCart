@@ -9,6 +9,9 @@ import cartRoutes from './routes/cartRoutes.js'
 import cors from "cors"
 import dns from "dns"
 
+// to access .env variables
+dotenv.config()
+
 const app = express()
 
 dns.setServers(["8.8.8.8"])
@@ -21,8 +24,7 @@ app.use(cors({ origin: "https://fullstack-quickcart.vercel.app", credentials: tr
 //to access cookies
 app.use(cookieParser()) //also a middleware but third party
 
-// to access .env variables
-dotenv.config()
+
 
 //Establishing mongodb connection
 connectDB()
