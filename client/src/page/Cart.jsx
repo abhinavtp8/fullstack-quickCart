@@ -42,7 +42,7 @@ const Cart = () => {
                 `https://quickcart-1-jpmw.onrender.com/cart/${prodId}/${action}`,
                 { method: "PUT", credentials: "include" },
             );
-            const data = res.json();
+            const data = await res.json();
             console.log(data);
             fetchCart();
         } catch (error) {
