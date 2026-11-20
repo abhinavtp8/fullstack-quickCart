@@ -19,7 +19,13 @@ dns.setServers(["8.8.8.8"])
 // to convert json data to original form
 app.use(express.json()) //built-in middleware
 
-app.use(cors({ origin: "https://fullstack-quickcart.vercel.app", credentials: true }))
+// app.use(cors({ origin: "https://fullstack-quickcart.vercel.app", credentials: true }))
+app.use(cors({
+    origin: "https://fullstack-quickcart.vercel.app",
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 
 //to access cookies
 app.use(cookieParser()) //also a middleware but third party
@@ -36,6 +42,8 @@ app.use(cartRoutes)
 app.use(usersRoutes)
 
 
-app.listen(5000, () => {
-    console.log("Server is listening on port 5000");
-})
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
