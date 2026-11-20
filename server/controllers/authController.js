@@ -38,7 +38,7 @@ export const login = async (req, res) => {
         //token creation
         const token = jwt.sign(
             { id: isExist._id, email: isExist.email, role: isExist.role },
-            process.env.JWT_SECTRET,
+            process.env.JWT_SECRET,
             { expiresIn: "1hr" },
         );
         console.log(token);
