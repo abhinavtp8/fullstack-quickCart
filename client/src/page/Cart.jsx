@@ -6,7 +6,7 @@ const Cart = () => {
 
     const fetchCart = async () => {
         try {
-            const res = await fetch("http://localhost:5000/cart", {
+            const res = await fetch("https://quickcart-1-jpmw.onrender.com/cart", {
                 credentials: "include",
             });
 
@@ -23,7 +23,7 @@ const Cart = () => {
 
     const handleRemoveFromCart = async (prodId) => {
         try {
-            const res = await fetch(`http://localhost:5000/cart/${prodId}`, {
+            const res = await fetch(`https://quickcart-1-jpmw.onrender.com/cart/${prodId}`, {
                 method: "DELETE",
                 credentials: "include",
             });
@@ -39,7 +39,7 @@ const Cart = () => {
     const handleUpdateQuantity = async (prodId, action) => {
         try {
             const res = await fetch(
-                `http://localhost:5000/cart/${prodId}/${action}`,
+                `https://quickcart-1-jpmw.onrender.com/cart/${prodId}/${action}`,
                 { method: "PUT", credentials: "include" },
             );
             const data = res.json();
