@@ -6,7 +6,7 @@ const Products = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("https://quickcart-1-jpmw.onrender.com/products");
+      const res = await fetch("https://fullstack-quickcart-1.onrender.com/products");
       const data = await res.json();
       console.log(data.products);
       setProducts(data.products)
@@ -16,7 +16,7 @@ const Products = () => {
   };
 
   const handleAddToCart = async(id,price)=>{
-    const res = await fetch("https://quickcart-1-jpmw.onrender.com/add-to-cart", {method: "POST", headers:{ "Content-Type": "application/json" }, credentials:"include", body: JSON.stringify({id,price})})
+    const res = await fetch("https://fullstack-quickcart-1.onrender.com/add-to-cart", {method: "POST", headers:{ "Content-Type": "application/json" }, credentials:"include", body: JSON.stringify({id,price})})
     const data = await res.json()
     console.log(data);
     toast.success("Item Added To Cart")

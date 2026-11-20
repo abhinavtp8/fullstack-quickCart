@@ -6,7 +6,7 @@ const UserProfile = () => {
 
     const fetchUser = async ()=>{
       try {
-        const res = await fetch("http://localhost:5000/me", {credentials:"include"})
+        const res = await fetch("https://fullstack-quickcart-1.onrender.com/me", {credentials:"include"})
         const data = await res.json()
         console.log(data.user);
         

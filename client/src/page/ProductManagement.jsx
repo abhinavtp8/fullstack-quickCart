@@ -55,7 +55,7 @@ const ProductManagement = () => {
 
     const fetchProducts = async () => {
         try {
-            const res = await fetch("http://localhost:5000/products");
+            const res = await fetch("https://fullstack-quickcart-1.onrender.com/products");
             const data = await res.json();
             console.log(data);
             if (data.success) {

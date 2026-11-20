@@ -21,7 +21,7 @@ const UsersManagement = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch("http://localhost:5000/admin/users", { credentials: "include" });
+      const res = await fetch("https://fullstack-quickcart-1.onrender.com/admin/users", { credentials: "include" });
       const data = await res.json();
       if (data.success) {
         console.log(data);

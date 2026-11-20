@@ -21,7 +21,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://quickcart-1-jpmw.onrender.com/register", {
+    const res = await fetch("https://fullstack-quickcart-1.onrender.com/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

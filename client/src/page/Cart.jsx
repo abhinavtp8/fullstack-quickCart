@@ -39,7 +39,7 @@ const Cart = () => {
     const handleUpdateQuantity = async (prodId, action) => {
         try {
             const res = await fetch(
-                `https://quickcart-1-jpmw.onrender.com/cart/${prodId}/${action}`,
+                `https://fullstack-quickcart-1.onrender.com/cart/${prodId}/${action}`,
                 { method: "PUT", credentials: "include" },
             );
             const data = await res.json();
